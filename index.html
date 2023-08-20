@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Pitch Detection</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
+  </head>
+
+  <body>
+    <!-- <h1>Pitch Detection</h1> -->
+    <p id="status">Loading Model...</p>
+    <button id="button">Start</button>
+    <p id="result">No pitch detected</p>
+    <div id="container" style="height: 800px">
+      <!-- <h1 id="img">image</h1> -->
+      <img id="img" src="/pika.png" alt="pikachu icon" />
+    </div>
+    <button id="button2">Start</button>
+    <script src="sketch.js"></script>
+    <script src="../addons/p5.sound.js"></script>
+  </body>
+</html>
+
+<style>
+  #status {
+    display: none;
+  }
+  #button,
+  #button2 {
+    color: rgb(239, 107, 30);
+    background-color: rgba(161, 253, 223, 0.798);
+    border-radius: 5rem;
+    border-style: none;
+    margin-bottom: 1rem;
+    font-size: large;
+  }
+  #result {
+    color: rgb(239, 107, 30);
+    font-size: xx-large;
+  }
+  #container {
+    width: 90%;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: rgb(239, 107, 30);
+    border-width: 0.2rem;
+    padding: 1rem;
+    position: relative;
+  }
+  #img {
+    position: absolute;
+    bottom: 10;
+    width: 100px;
+    height: 100px;
+    left: 40%;
+  }
+</style>
